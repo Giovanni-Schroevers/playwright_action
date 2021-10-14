@@ -1,7 +1,3 @@
-/*
- * Copyright © Reach Digital (https://www.reachdigital.io/)
- * See LICENSE.txt for license details.
- */
 import { PlaywrightTestConfig, devices } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
