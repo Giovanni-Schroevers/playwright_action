@@ -1,0 +1,26 @@
+name: Playwright
+
+on:
+  repository_dispatch:
+    types: [playwright]
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - name: Install operating system dependencies
+        run: npx playwright install-deps
+      - name: Install webkit
+        run: npx playwright install webkit
+      - name: Install chromium
+        run: npx playwright install chromium
+      - name: test
+        id: test
+        run: npx playwright test
+        timeout-minutes: 5
