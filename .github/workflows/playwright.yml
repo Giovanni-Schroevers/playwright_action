@@ -24,3 +24,7 @@ jobs:
         id: test
         run: npx playwright test
         timeout-minutes: 5
+      - uses: actions/upload-artifact@v2
+        with:
+          name: results
+          path: test-results/

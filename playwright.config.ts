@@ -13,13 +13,16 @@ const config: PlaywrightTestConfig = {
     },
     {
       name: 'iphone',
-      use: { browserName: 'webkit', viewport: { width: 390, height: 664 }},
+      use: { browserName: 'webkit', ...devices['iPhone 12']},
     },
     {
       name: 'chrome',
       use: { browserName: 'chromium', viewport: { width: 1280, height: 1280 } },
     },
   ],
+  use: {
+    trace: 'on',
+  },
   timeout: 120000,
 }
 
