@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
     },
   ],
   use: {
-    trace: 'on',
+    trace: 'retain-on-failure',
   },
   timeout: 120000,
 }
